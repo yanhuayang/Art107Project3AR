@@ -1,13 +1,27 @@
 <!doctype HTML>
 <html>
+<!-- This is a link to the latest A-Frame library-->
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
-<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.6/aframe/build/aframe-ar.js"></script>
-  <body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-          <a-box position='0 0.5 0' material='color: yellow;'></a-box>
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+
+<!-- This is a link to the ar.js library for A-Frame -->
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.0.1/aframe/build/aframe-ar.js"></script>
+
+<body style='margin : 0px; overflow: hidden;'>
+
+<a-scene embedded arjs>
+
+<a-marker type="pattern" preset="custom" url="pattern-SupremeCourt.patt">
+
+<a-cylinder src = "https://cdn.glitch.com/2ddb9005-2bfd-4387-ac54-fd1eb0d0a4f0%2FFlockofBirdsGroup.jpg?v=1573527336731" position= "0 0.5 0" material= "color: yellow" height=".5" radius=".25"></a-cylinder>
+
+<a-text value="We are world citizen!" position="-0.5 0 -1" color="#FF16EB" rotation="-45 0 0"></a-text>
+
+</a-marker>
+
+<a-entity camera></a-entity>
+
+</a-scene>
+
+</body>
+
 </html>
